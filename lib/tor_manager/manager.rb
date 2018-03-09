@@ -1,3 +1,7 @@
+require 'net/telnet'
+require 'socksify/http'
+require 'mechanize'
+
 class TorManager::Manager
   def initialize(control_port = 9051, socks_port = 9050)
     @tor_control_port = control_port

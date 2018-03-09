@@ -2,6 +2,9 @@ PATH
   remote: .
   specs:
     tor-manager (0.1.0)
+      mechanize (~> 2.7.5)
+      net-telnet (~> 0.1.1)
+      socksify (~> 1.7.1)
 
 GEM
   remote: https://rubygems.org/
@@ -42,11 +45,8 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  mechanize
   minitest (~> 5.0)
-  net-telnet
   rake (~> 10.0)
-  socksify
   tor-manager!
 
 BUNDLED WITH
