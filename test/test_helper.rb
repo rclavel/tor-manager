@@ -1,4 +1,4 @@
-$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "tor_manager"
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
-require "minitest/autorun"
+require 'tor_manager'
+require 'minitest/autorun'
