@@ -32,12 +32,12 @@ class TorManager::Tor
     end
 
     def fetch_ip_address(real_ip: false)
-      uri = URI.parse('https://api.ipify.org/')
+      uri = URI.parse('http://api.ipify.org/')
       response =
         if real_ip
-          Net::HTTP.start(uri.host, uri.port, use_ssl: true) { |http| http.get(uri.path) }
+          Net::HTTP.start(uri.host, uri.port) { |http| http.get(uri.path) }
         else
-          start(uri.host, uri.port, use_ssl: true) { |http| http.get(uri.path) }
+          start(uri.host, uri.port) { |http| http.get(uri.path) }
         end
       response.body
     end
