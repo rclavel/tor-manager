@@ -8,7 +8,7 @@ class TorManager::Tor
     TOR_CONTROL_PORT = 9051
 
     # Source: https://gist.github.com/enginnr/ed572cf5c324ad04ff2e
-    USER_AGENTS = File.read('./user_agent_list.txt').split("\n")
+    USER_AGENTS = File.read(File.join(File.dirname(__FILE__), 'user_agent_list.txt')).split("\n")
 
     def start(host, port, req_options = {}, &block)
       Net::HTTP
