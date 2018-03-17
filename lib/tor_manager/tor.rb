@@ -7,10 +7,17 @@ class TorManager::Tor
     TOR_SOCKS_PORT = 9050
     TOR_CONTROL_PORT = 9051
 
+    # Source: https://gist.github.com/enginnr/ed572cf5c324ad04ff2e
+    USER_AGENTS = File.read('./user_agent_list.txt').split("\n")
+
     def start(host, port, req_options = {}, &block)
       Net::HTTP
         .SOCKSProxy(TOR_SOCKS_SERVER, TOR_SOCKS_PORT)
         .start(host, port, req_options, &block)
+    end
+
+    def get_random_user_agent
+      USER_AGENTS.sample
     end
 
     def switch_tor_endpoint!

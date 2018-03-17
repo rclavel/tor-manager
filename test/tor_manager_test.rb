@@ -22,4 +22,8 @@ class TorManagerTest < Minitest::Test
     tor_ip = TorManager::Tor.fetch_ip_address
     puts "Tor IP (after): #{tor_ip}"
   end
+
+  def test_get_user_agent
+    puts "Get random user agent: #{TorManager::Tor.get_random_user_agent}"
+  end
 end

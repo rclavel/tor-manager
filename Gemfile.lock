@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tor-manager (0.1.4)
+    tor-manager (0.1.5)
       net-telnet (~> 0.1.1)
       socksify (~> 1.7.1)
 
