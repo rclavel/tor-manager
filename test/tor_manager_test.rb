@@ -26,4 +26,10 @@ class TorManagerTest < Minitest::Test
   def test_get_user_agent
     puts "Get random user agent: #{TorManager::Tor.get_random_user_agent}"
   end
+
+  def test_simple_http_get
+    query = TorManager::Tor.get('https://www.google.fr/')
+    puts "HTTP Code: #{query.code}"
+    puts "HTTP Body Size: #{query.body.size}"
+  end
 end

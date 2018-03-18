@@ -38,6 +38,11 @@ class TorManager::Tor
       true
     end
 
+    def get(uri)
+      uri = URI.parse(uri)
+      start(uri.host, uri.port, use_ssl: uri.scheme == 'https') { |http| http.get(uri.path) }
+    end
+
     def fetch_ip_address(real_ip: false)
       uri = URI.parse('http://api.ipify.org/')
       response =
