@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tor-manager (0.1.5)
+    tor_manager (0.1.7)
       net-telnet (~> 0.1.1)
       socksify (~> 1.7.1)
 
@@ -20,7 +20,7 @@ DEPENDENCIES
   bundler (~> 1.16)
   minitest (~> 5.0)
   rake (~> 10.0)
-  tor-manager!
+  tor_manager!
 
 BUNDLED WITH
    1.16.1
